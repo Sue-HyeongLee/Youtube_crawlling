@@ -128,7 +128,7 @@ for i in range(0, 10):
         print(len(new_title_list))
         
         df = pd.DataFrame({"comment": applied_comment_list , "like": applied_like_list, "time" : applied_time_list, "title_list": new_title_list })
-        df.to_csv("./output/"+i+".csv", encoding= 'utf-8-sig') # utf-8로 할 경우, 파일이 깨짐.
+        df.to_csv("./output/"+str(i)+".csv", encoding= 'utf-8-sig') # utf-8로 할 경우, 파일이 깨짐.
     except Exception as e:
         print(f"An error occurred for URL {url}: {str(e)}")
         # 예외가 발생했더라도 계속 진행하도록 다음 반복으로 이동
