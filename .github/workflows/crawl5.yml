@@ -1,10 +1,9 @@
 name: Crawl and Save Data5
 
 on:
-  workflow_run:
-    workflows: ["Crawl and Save Data4"]
-    types:
-      - completed
+  push:
+    branches:
+      - main
 
 jobs:
   crawl_and_save:
